@@ -1,0 +1,6 @@
+.DS_Store
+public_html/
+DO_NOT_UPLOAD_HERE
+.claude/
+node_modules/
+.vercel/
