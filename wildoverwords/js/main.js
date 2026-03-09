@@ -5,6 +5,11 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  const isMobileViewport = window.matchMedia('(max-width: 768px)').matches;
+  if (isMobileViewport) {
+    document.body.classList.add('mobile-optimized');
+  }
+
   // --- Page Loader ---
   const loader = document.querySelector('.page-loader');
   if (loader) {
@@ -128,7 +133,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Image reveal animations ---
   const revealImages = document.querySelectorAll('.reveal-image');
-  if (revealImages.length && 'IntersectionObserver' in window) {
+  if (isMobileViewport) {
+    revealImages.forEach(el => el.classList.add('revealed'));
+  } else if (revealImages.length && 'IntersectionObserver' in window) {
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -228,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Hero parallax effect ---
   const heroImage = document.querySelector('.hero-image-container img');
-  if (heroImage) {
+  if (heroImage && !isMobileViewport) {
     window.addEventListener('scroll', () => {
       const rect = heroImage.getBoundingClientRect();
       if (rect.bottom > 0 && rect.top < window.innerHeight) {
@@ -259,6 +266,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // --- Mobile: collapse long case study details for better scanability ---
+  if (isMobileViewport && caseStudies.length) {
+    caseStudies.forEach((study) => {
+      const children = Array.from(study.children);
+      const firstDetailIndex = children.findIndex((el) => el.tagName === 'H4');
+      if (firstDetailIndex === -1) return;
+
+      const detailsWrap = document.createElement('div');
+      detailsWrap.className = 'cs-mobile-details';
+
+      children.slice(firstDetailIndex).forEach((node) => {
+        detailsWrap.appendChild(node);
+      });
+
+      const toggleBtn = document.createElement('button');
+      toggleBtn.type = 'button';
+      toggleBtn.className = 'cs-mobile-toggle';
+      toggleBtn.textContent = 'Read Full Case Study';
+      toggleBtn.setAttribute('aria-expanded', 'false');
+
+      study.appendChild(detailsWrap);
+      study.appendChild(toggleBtn);
+
+      toggleBtn.addEventListener('click', () => {
+        const expanded = study.classList.toggle('expanded');
+        toggleBtn.setAttribute('aria-expanded', String(expanded));
+        toggleBtn.textContent = expanded ? 'Show Less' : 'Read Full Case Study';
+      });
+    });
+  }
+
   // --- Back to top button ---
   const backToTop = document.querySelector('.back-to-top');
   if (backToTop) {
@@ -272,7 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Magnetic hover on CTA buttons ---
   const magneticBtns = document.querySelectorAll('.btn-large, .nav-cta');
-  if (window.matchMedia('(hover: hover)').matches) {
+  if (!isMobileViewport && window.matchMedia('(hover: hover)').matches) {
     magneticBtns.forEach(btn => {
       btn.addEventListener('mousemove', (e) => {
         const rect = btn.getBoundingClientRect();

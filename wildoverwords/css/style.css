@@ -3091,6 +3091,58 @@ p { margin-bottom: 1rem; font-weight: 300; }
   }
 }
 
+/* --- Mobile Case Study UX + Motion Calm --- */
+@media (max-width: 768px) {
+  .mobile-optimized .fade-up,
+  .mobile-optimized .fade-in,
+  .mobile-optimized .scale-in {
+    transition-duration: 0.45s;
+  }
+
+  .mobile-optimized .cta-glow {
+    animation: none;
+  }
+
+  .mobile-optimized .case-study {
+    padding-bottom: 14px;
+  }
+
+  .mobile-optimized .case-study.expanded {
+    padding-bottom: 16px;
+  }
+
+  .mobile-optimized .cs-mobile-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s ease;
+  }
+
+  .mobile-optimized .case-study.expanded .cs-mobile-details {
+    max-height: 5000px;
+  }
+
+  .mobile-optimized .cs-mobile-toggle {
+    width: 100%;
+    margin-top: 12px;
+    border: 1px solid rgba(32, 42, 45, 0.2);
+    background: rgba(203, 208, 181, 0.22);
+    color: var(--text);
+    border-radius: 12px;
+    padding: 11px 14px;
+    font-size: 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    line-height: 1;
+  }
+
+  .mobile-optimized .case-study.expanded .cs-mobile-toggle {
+    background: var(--text);
+    color: var(--bg);
+    border-color: var(--text);
+  }
+}
+
 /* --- Utility --- */
 .text-center { text-align: center; }
 .mt-40 { margin-top: 40px; }
