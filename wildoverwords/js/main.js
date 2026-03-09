@@ -1,5 +1,6 @@
 /* ========================================
    Wild Over Words — main.js
+   Modern Organic Editorial Theme
    ======================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -59,6 +60,18 @@ document.addEventListener('DOMContentLoaded', () => {
         if (link) {
           link.classList.toggle('active', scrollY >= top && scrollY < top + height);
         }
+      });
+    });
+  }
+
+  // --- Process horizontal scroll gallery ---
+  const processScroll = document.getElementById('process-scroll');
+  const processArrows = document.querySelectorAll('.process-arrow');
+  if (processScroll && processArrows.length) {
+    processArrows.forEach(arrow => {
+      arrow.addEventListener('click', () => {
+        const dir = parseInt(arrow.dataset.dir);
+        processScroll.scrollBy({ left: dir * 380, behavior: 'smooth' });
       });
     });
   }
