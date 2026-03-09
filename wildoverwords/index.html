@@ -16,6 +16,21 @@
 </head>
 <body>
 
+  <!-- Page Loader -->
+  <div class="page-loader" aria-hidden="true">
+    <div class="loader-inner">
+      <span class="loader-logo">w</span>
+      <span class="loader-text">Wild Over Words</span>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-outline" aria-hidden="true"></div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
   <!-- Noise Texture Overlay -->
   <div class="noise-overlay" aria-hidden="true"></div>
 
@@ -45,7 +60,7 @@
   <section class="hero section" id="home">
     <div class="container">
       <div class="hero-content">
-        <p class="label hero-anim hero-anim-1">Content Strategy & Brand Storytelling</p>
+        <p class="label hero-anim hero-anim-1"><span style="opacity:0.6">Yukti Agarwal</span> &middot; Content Strategy & Brand Storytelling</p>
         <h1 class="hero-anim hero-anim-2">
           <em>Stories that</em><br>
           build brands people<br>
@@ -74,12 +89,44 @@
 
   <!-- ===== HERO IMAGE BLOCK ===== -->
   <div class="hero-image-block">
-    <div class="hero-image-container">
+    <div class="hero-image-container reveal-image">
       <img src="images/hero-slider.jpg" alt="Wild Over Words — Creative direction and brand storytelling" loading="eager">
       <div class="hero-image-overlay">
         <hr>
         <p class="label">Strategy-Led Creative Studio</p>
         <h2>Where narrative<br>meets performance</h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== WHAT I DO ===== -->
+  <div class="whatido-strip">
+    <div class="whatido-track">
+      <div class="whatido-inner">
+        <span>Luxury Brand Storytelling</span>
+        <span class="whatido-dot">◆</span>
+        <span>Social Media Strategy</span>
+        <span class="whatido-dot">◆</span>
+        <span>Reel Production &amp; Scripting</span>
+        <span class="whatido-dot">◆</span>
+        <span>SEO Content Writing</span>
+        <span class="whatido-dot">◆</span>
+        <span>Brand Strategy</span>
+        <span class="whatido-dot">◆</span>
+        <span>Web Development</span>
+        <span class="whatido-dot">◆</span>
+        <span>Luxury Brand Storytelling</span>
+        <span class="whatido-dot">◆</span>
+        <span>Social Media Strategy</span>
+        <span class="whatido-dot">◆</span>
+        <span>Reel Production &amp; Scripting</span>
+        <span class="whatido-dot">◆</span>
+        <span>SEO Content Writing</span>
+        <span class="whatido-dot">◆</span>
+        <span>Brand Strategy</span>
+        <span class="whatido-dot">◆</span>
+        <span>Web Development</span>
+        <span class="whatido-dot">◆</span>
       </div>
     </div>
   </div>
@@ -90,6 +137,7 @@
       <div class="section-header fade-up">
         <p class="label">Results That Compound</p>
         <h2>Numbers that matter.</h2>
+        <p class="label" style="margin-top: 8px; color: rgba(203, 208, 181, 0.5);">Strategy &middot; Narrative &middot; Growth</p>
       </div>
       <div class="results-grid">
         <div class="result-card fade-up">
@@ -125,7 +173,7 @@
   <section class="section about-section" id="about">
     <div class="container">
       <div class="about-grid">
-        <div class="about-image fade-up">
+        <div class="about-image reveal-image">
           <img src="images/yukti-portfolio.jpg" alt="Yukti Agarwal — Wild Over Words" loading="lazy">
         </div>
         <div class="about-text fade-up">
@@ -149,10 +197,26 @@
         <p class="label">Brands I've Worked With</p>
         <h2>Trusted by growing brands across fashion, lifestyle, luxury, and digital innovation.</h2>
       </div>
-      <div class="client-logos fade-up">
-        <img src="images/luxury-abode.jpeg" alt="Luxury Abode" title="Luxury Abode">
-        <img src="images/rajat-group.jpg" alt="Rajat Group" title="Rajat Group">
-        <img src="images/papermill-co.png" alt="The Papermill Co." title="The Papermill Co.">
+      <div class="client-logos-marquee fade-up">
+        <div class="client-logos-track">
+          <div class="client-logos-inner">
+            <img src="images/logos/raa-studio.jpg" alt="RAA Studio" title="RAA Studio">
+            <img src="images/logos/nehha-nhata.jpeg" alt="Nehha Nhata" title="Nehha Nhata">
+            <img src="images/logos/papermill-co.png" alt="The Papermill Co." title="The Papermill Co.">
+            <img src="images/logos/luxury-abode.jpg" alt="Luxury Abode" title="Luxury Abode">
+            <img src="images/logos/iovr.png" alt="IOVR" title="IOVR">
+            <img src="images/logos/rajat-group.jpg" alt="Rajat Group" title="Rajat Group">
+            <img src="images/logos/amul.jpg" alt="Amul" title="Amul">
+            <!-- Duplicate set for seamless loop -->
+            <img src="images/logos/raa-studio.jpg" alt="RAA Studio" title="RAA Studio">
+            <img src="images/logos/nehha-nhata.jpeg" alt="Nehha Nhata" title="Nehha Nhata">
+            <img src="images/logos/papermill-co.png" alt="The Papermill Co." title="The Papermill Co.">
+            <img src="images/logos/luxury-abode.jpg" alt="Luxury Abode" title="Luxury Abode">
+            <img src="images/logos/iovr.png" alt="IOVR" title="IOVR">
+            <img src="images/logos/rajat-group.jpg" alt="Rajat Group" title="Rajat Group">
+            <img src="images/logos/amul.jpg" alt="Amul" title="Amul">
+          </div>
+        </div>
       </div>
       <div class="brands-tagline fade-up">
         <span>8+ Brands Collaborated With Across 5 Industries</span>
@@ -339,34 +403,71 @@
             </div>
             <h5>Emotional Heritage Narrative</h5>
             <p>A storytelling-driven reel blending heirloom fabrics, Banarasi weaves, and nostalgic memory.</p>
+            <ul class="reel-card__why">
+              <li>Emotional storytelling created strong viewer connection</li>
+              <li>Clean pacing and a powerful hook sustained watch time</li>
+              <li>Reinforced the brand's identity of heritage-driven luxury</li>
+            </ul>
           </a>
-          <a href="https://www.instagram.com/reel/DPBBU4wCXzY/" target="_blank" rel="noopener" class="reel-card">
-            <div class="reel-card__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+          <a href="https://www.instagram.com/reel/DPBBU4wCXzY/" target="_blank" rel="noopener" class="reel-card reel-card--has-thumb">
+            <div class="reel-card__thumb">
+              <img src="images/thumbnails/behind-the-scenes.jpg" alt="Behind the Scenes Process" loading="lazy">
+              <div class="reel-card__play">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+              </div>
             </div>
             <h5>Behind the Scenes Process</h5>
-            <p>A complete journey from sketch to finished Savan Lehenga, showcasing craftsmanship and customization.</p>
+            <p>A complete journey from sketch to finished Savan Lehenga.</p>
+            <ul class="reel-card__why">
+              <li>Process transparency built trust with potential clients</li>
+              <li>Showcased craftsmanship and customization in detail</li>
+              <li>Educational storytelling increased saves and engagement</li>
+            </ul>
           </a>
-          <a href="https://www.instagram.com/reel/DP_xp_5idi6/" target="_blank" rel="noopener" class="reel-card">
-            <div class="reel-card__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+          <a href="https://www.instagram.com/reel/DP_xp_5idi6/" target="_blank" rel="noopener" class="reel-card reel-card--has-thumb">
+            <div class="reel-card__thumb">
+              <img src="images/thumbnails/diwali-edit.jpg" alt="Diwali Edit" loading="lazy">
+              <div class="reel-card__play">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+              </div>
             </div>
             <h5>Diwali Edit</h5>
-            <p>A festive couture reel aligned with trending audio and high-energy cinematic visuals.</p>
+            <p>A festive couture reel aligned with trending audio and high-energy visuals.</p>
+            <ul class="reel-card__why">
+              <li>Trend-aware audio selection boosted discoverability</li>
+              <li>Cinematic pacing and festive timing increased shareability</li>
+              <li>Elevated the brand's aspirational appeal</li>
+            </ul>
           </a>
-          <a href="https://www.instagram.com/reel/DAQXfvXSHjf/" target="_blank" rel="noopener" class="reel-card">
-            <div class="reel-card__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+          <a href="https://www.instagram.com/reel/DAQXfvXSHjf/" target="_blank" rel="noopener" class="reel-card reel-card--has-thumb">
+            <div class="reel-card__thumb">
+              <img src="images/thumbnails/doriya-series.jpg" alt="Doriya Series" loading="lazy">
+              <div class="reel-card__play">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+              </div>
             </div>
             <h5>Doriya Series</h5>
             <p>A five-function wedding storytelling arc tied by the symbolic &ldquo;dori&rdquo; of relationships.</p>
+            <ul class="reel-card__why">
+              <li>Emotional storytelling turned outfits into memories</li>
+              <li>Built deeper brand attachment</li>
+              <li>Strengthened the perception of couture as meaningful luxury</li>
+            </ul>
           </a>
-          <a href="https://www.instagram.com/reel/DHXvFfexFdm/" target="_blank" rel="noopener" class="reel-card">
-            <div class="reel-card__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+          <a href="https://www.instagram.com/reel/DHXvFfexFdm/" target="_blank" rel="noopener" class="reel-card reel-card--has-thumb">
+            <div class="reel-card__thumb">
+              <img src="images/thumbnails/pichwai-edit.jpg" alt="The Pichwai Edit" loading="lazy">
+              <div class="reel-card__play">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+              </div>
             </div>
             <h5>The Pichwai Edit</h5>
-            <p>Hand-painted Pichwai motifs adapted into contemporary menswear, blending heritage art with modern fashion.</p>
+            <p>A reel showcasing hand-painted Pichwai motifs adapted into contemporary menswear.</p>
+            <ul class="reel-card__why">
+              <li>Blended heritage art with modern fashion</li>
+              <li>Positioned the garments as wearable art pieces</li>
+              <li>Reinforced craftsmanship as the brand's core identity</li>
+            </ul>
           </a>
         </div>
       </div>
@@ -385,6 +486,46 @@
         </div>
         <h4>Approach</h4>
         <p>Focused on cinematic storytelling that blended travel aesthetics with couture fashion. Developed clear narrative arcs, strong hooks, and seamless visual flow to increase watch time and engagement.</p>
+
+        <h4>Selected Reel Examples</h4>
+        <div class="reel-examples-grid">
+          <a href="#" target="_blank" rel="noopener" class="reel-card reel-card--has-thumb">
+            <div class="reel-card__thumb">
+              <img src="images/thumbnails/nehha-nhata-1.jpg" alt="Nehha Nhata Reel 1" loading="lazy">
+              <div class="reel-card__play">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+              </div>
+            </div>
+            <h5>View Reel on Instagram</h5>
+          </a>
+          <a href="#" target="_blank" rel="noopener" class="reel-card reel-card--has-thumb">
+            <div class="reel-card__thumb">
+              <img src="images/thumbnails/nehha-nhata-2.jpg" alt="Nehha Nhata Reel 2" loading="lazy">
+              <div class="reel-card__play">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+              </div>
+            </div>
+            <h5>View Reel on Instagram</h5>
+          </a>
+          <a href="#" target="_blank" rel="noopener" class="reel-card reel-card--has-thumb">
+            <div class="reel-card__thumb">
+              <img src="images/thumbnails/nehha-nhata-3.jpg" alt="Nehha Nhata Reel 3" loading="lazy">
+              <div class="reel-card__play">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+              </div>
+            </div>
+            <h5>View Reel on Instagram</h5>
+          </a>
+          <a href="#" target="_blank" rel="noopener" class="reel-card reel-card--has-thumb">
+            <div class="reel-card__thumb">
+              <img src="images/thumbnails/nehha-nhata-4.jpg" alt="Nehha Nhata Reel 4" loading="lazy">
+              <div class="reel-card__play">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+              </div>
+            </div>
+            <h5>View Reel on Instagram</h5>
+          </a>
+        </div>
       </div>
 
       <!-- Case Study: The Papermill Co. -->
@@ -399,10 +540,32 @@
         </div>
         <h4>Strategy</h4>
         <p>Focused on process-led storytelling that highlights craftsmanship and artistic detail. Positioned reels as calming, aesthetic content designed to attract a targeted audience interested in stationery, calligraphy, and creative gifting.</p>
-        <div class="reel-examples-grid reel-examples-grid--small">
-          <a href="https://www.instagram.com/reel/DPgeW5mCaeD/" target="_blank" rel="noopener" class="reel-card">
-            <div class="reel-card__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+        <h4>Selected Reel Examples</h4>
+        <div class="reel-examples-grid">
+          <a href="https://www.instagram.com/reel/DPgeW5mCaeD/" target="_blank" rel="noopener" class="reel-card reel-card--has-thumb">
+            <div class="reel-card__thumb">
+              <img src="images/thumbnails/papermill-1.jpg" alt="The Papermill Co. Reel 1" loading="lazy">
+              <div class="reel-card__play">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+              </div>
+            </div>
+            <h5>View Reel on Instagram</h5>
+          </a>
+          <a href="#" target="_blank" rel="noopener" class="reel-card reel-card--has-thumb">
+            <div class="reel-card__thumb">
+              <img src="images/thumbnails/papermill-2.png" alt="The Papermill Co. Reel 2" loading="lazy">
+              <div class="reel-card__play">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+              </div>
+            </div>
+            <h5>View Reel on Instagram</h5>
+          </a>
+          <a href="#" target="_blank" rel="noopener" class="reel-card reel-card--has-thumb">
+            <div class="reel-card__thumb">
+              <img src="images/thumbnails/papermill-3.png" alt="The Papermill Co. Reel 3" loading="lazy">
+              <div class="reel-card__play">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+              </div>
             </div>
             <h5>View Reel on Instagram</h5>
           </a>
@@ -441,27 +604,27 @@
 
       <!-- Portfolio Image Grid -->
       <div class="portfolio-grid">
-        <div class="portfolio-item fade-up">
+        <div class="portfolio-item portfolio-item--wide reveal-image">
           <img src="images/shreya-ghoshal.jpeg" alt="Celebrity placement — Shreya Ghoshal in RAA Studio" loading="lazy">
           <div class="portfolio-overlay"><span>RAA Studio</span></div>
         </div>
-        <div class="portfolio-item fade-up">
+        <div class="portfolio-item reveal-image">
           <img src="images/yukti-work.jpg" alt="Content creation — product styling" loading="lazy">
           <div class="portfolio-overlay"><span>Content Creation</span></div>
         </div>
-        <div class="portfolio-item fade-up">
+        <div class="portfolio-item reveal-image">
           <img src="images/portfolio/beauty.jpg" alt="Beauty & lifestyle content" loading="lazy">
           <div class="portfolio-overlay"><span>Lifestyle</span></div>
         </div>
-        <div class="portfolio-item fade-up">
+        <div class="portfolio-item portfolio-item--tall reveal-image">
           <img src="images/portfolio/img1.jpg" alt="Portfolio work" loading="lazy">
           <div class="portfolio-overlay"><span>Brand Content</span></div>
         </div>
-        <div class="portfolio-item fade-up">
+        <div class="portfolio-item reveal-image">
           <img src="images/portfolio/img5.jpg" alt="Portfolio work" loading="lazy">
           <div class="portfolio-overlay"><span>Social Media</span></div>
         </div>
-        <div class="portfolio-item fade-up">
+        <div class="portfolio-item reveal-image">
           <img src="images/portfolio/img8.jpg" alt="Portfolio work" loading="lazy">
           <div class="portfolio-overlay"><span>Strategy</span></div>
         </div>
@@ -546,9 +709,10 @@
   <!-- ===== CTA SECTION ===== -->
   <section class="cta-section">
     <div class="container">
-      <div class="cta-card fade-up">
+      <div class="cta-card scale-in">
         <div class="cta-glow"></div>
         <h2>Ready to evolve?</h2>
+        <p class="cta-subtitle">Let's build something memorable together.</p>
         <a href="#contact" class="btn btn-primary btn-large">Let's Collaborate</a>
       </div>
     </div>
@@ -615,6 +779,11 @@
       </div>
     </div>
   </section>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
