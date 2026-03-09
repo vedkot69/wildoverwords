@@ -2616,6 +2616,216 @@ p { margin-bottom: 1rem; font-weight: 300; }
   }
 }
 
+/* --- Mobile Usability Overrides (Stronger Pass) --- */
+@media (max-width: 768px) {
+  .btn,
+  .nav-cta,
+  .read-more,
+  .cs-link {
+    letter-spacing: 0.14em;
+  }
+
+  .section {
+    padding: 72px 0;
+  }
+
+  .section-header h2 {
+    max-width: 16ch;
+  }
+
+  .hero-desc,
+  .about-text p,
+  .case-study p,
+  .contact .section-header p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .hero-image-container {
+    height: 48vh;
+  }
+
+  .whatido-inner {
+    animation-duration: 34s;
+  }
+
+  .client-logos-track {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .client-logos-inner {
+    animation: none;
+    white-space: normal;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 22px;
+  }
+
+  .client-logos-inner img {
+    opacity: 0.75;
+    filter: grayscale(20%);
+  }
+
+  .process-arrows {
+    display: none;
+  }
+
+  .process-scroll-wrapper::before,
+  .process-scroll-wrapper::after {
+    display: none;
+  }
+
+  .process-scroll {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    overflow: visible;
+    padding: 0;
+  }
+
+  .process-card {
+    flex: initial;
+    max-width: none;
+    width: 100%;
+  }
+
+  .reel-examples-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reel-card {
+    border-radius: 14px;
+  }
+
+  .reel-card__thumb {
+    max-height: 420px;
+  }
+
+  .case-study h3 {
+    font-size: clamp(1.35rem, 6vw, 1.75rem);
+  }
+
+  .cs-role,
+  .result-brand,
+  .footer-bottom {
+    letter-spacing: 0.1em;
+  }
+
+  .contact-grid {
+    gap: 26px;
+  }
+
+  .contact-info h3 {
+    margin-bottom: 14px;
+  }
+
+  .footer-grid {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container,
+  .hero-image-block {
+    width: 94%;
+  }
+
+  .section {
+    padding: 64px 0;
+  }
+
+  .hero {
+    padding: 96px 0 34px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.05rem, 11.2vw, 2.75rem);
+    margin-bottom: 18px;
+  }
+
+  .hero-ctas {
+    gap: 10px;
+  }
+
+  .hero-ctas .btn,
+  .contact-form .btn {
+    padding: 14px 20px;
+    font-size: 9px;
+  }
+
+  .hero-image-container {
+    height: 42vh;
+    border-radius: 18px;
+  }
+
+  .hero-image-overlay {
+    left: 14px;
+    bottom: 14px;
+  }
+
+  .hero-image-overlay h2 {
+    font-size: clamp(1.2rem, 6.4vw, 1.6rem);
+  }
+
+  .results-grid,
+  .services-grid,
+  .testimonials-grid,
+  .blog-grid {
+    gap: 12px;
+  }
+
+  .result-card,
+  .service-card,
+  .testimonial-card,
+  .blog-card,
+  .contact-form,
+  .case-study {
+    border-radius: 16px;
+  }
+
+  .result-card {
+    min-height: auto;
+    padding: 22px 14px;
+  }
+
+  .result-metric {
+    min-height: 0;
+  }
+
+  .service-card {
+    min-height: 0;
+    padding: 24px 16px;
+  }
+
+  .case-study {
+    padding: 18px 14px;
+  }
+
+  .case-study ul {
+    padding-left: 16px;
+  }
+
+  .blog-card-body {
+    padding: 16px;
+  }
+
+  .cta-card {
+    padding: 38px 16px;
+    border-radius: 18px;
+  }
+
+  .cta-card .btn-large {
+    width: 100%;
+    padding: 14px 20px;
+  }
+
+  .contact-info-item .info-text a,
+  .contact-info-item .info-text p {
+    font-size: 0.92rem;
+  }
+}
+
 /* --- Utility --- */
 .text-center { text-align: center; }
 .mt-40 { margin-top: 40px; }
