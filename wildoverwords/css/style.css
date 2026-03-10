@@ -353,7 +353,7 @@ p { margin-bottom: 1rem; font-weight: 300; }
 
 .hero-underline svg {
   position: absolute;
-  bottom: -8px;
+  bottom: -20px;
   left: 0;
   width: 100%;
   height: 16px;
@@ -439,28 +439,23 @@ p { margin-bottom: 1rem; font-weight: 300; }
   color: var(--white);
 }
 
-.hero-image-overlay hr {
-  width: 48px;
-  border: none;
-  border-top: 2px solid var(--white);
-  margin-bottom: 16px;
+.hero-overlay-logo {
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
 }
 
-.hero-image-overlay .label {
-  color: rgba(255,255,255,0.7);
-  margin-bottom: 8px;
-}
-
-.hero-image-overlay h2 {
-  font-size: clamp(1.8rem, 4vw, 4.5rem);
-  color: var(--white);
-  font-style: italic;
+.hero-image-container:hover .hero-overlay-logo {
+  opacity: 1;
 }
 
 @media (max-width: 600px) {
   .hero-image-container { height: 50vh; border-radius: var(--r-sm); }
   .hero-image-overlay { bottom: 24px; left: 24px; }
-  .hero-image-overlay h2 { font-size: clamp(1.4rem, 6vw, 2rem); }
+  .hero-overlay-logo { max-width: 140px; }
 }
 
 /* --- What I Do Strip --- */
@@ -470,11 +465,11 @@ p { margin-bottom: 1rem; font-weight: 300; }
 }
 
 .whatido-strip {
-  padding: 32px 0;
+  padding: 28px 0;
   overflow: hidden;
-  border-top: 1px solid rgba(32, 42, 45, 0.06);
-  border-bottom: 1px solid rgba(32, 42, 45, 0.06);
-  background: var(--bg);
+  border-top: none;
+  border-bottom: none;
+  background: var(--text);
 }
 
 .whatido-track {
@@ -493,24 +488,26 @@ p { margin-bottom: 1rem; font-weight: 300; }
 }
 
 .whatido-inner span {
-  font-family: var(--font-heading);
-  font-size: 13px;
-  font-weight: 400;
-  font-style: italic;
-  letter-spacing: 0.08em;
-  color: rgba(32, 42, 45, 0.4);
-  padding: 0 20px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(247, 245, 235, 0.7);
+  padding: 0 24px;
   transition: color 0.3s;
 }
 
 .whatido-inner span:not(.whatido-dot):hover {
-  color: var(--text);
+  color: var(--bg);
 }
 
 .whatido-dot {
-  font-size: 6px !important;
-  opacity: 0.25;
+  font-size: 8px !important;
+  opacity: 0.4;
   font-style: normal !important;
+  color: var(--accent);
 }
 
 /* --- Client Logos Marquee --- */
@@ -915,8 +912,8 @@ p { margin-bottom: 1rem; font-weight: 300; }
 .brands-logo-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
-  max-width: 800px;
+  gap: 18px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -925,11 +922,11 @@ p { margin-bottom: 1rem; font-weight: 300; }
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  padding: 28px 18px 22px;
+  gap: 14px;
+  padding: 36px 24px 28px;
   border-radius: 20px;
-  border: 1px solid rgba(32, 42, 45, 0.07);
-  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(203, 208, 181, 0.35);
+  background: rgba(203, 208, 181, 0.12);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -944,18 +941,18 @@ p { margin-bottom: 1rem; font-weight: 300; }
 
 .brand-tile img {
   max-width: 100%;
-  max-height: 40px;
+  max-height: 56px;
   width: auto;
   object-fit: contain;
-  filter: grayscale(100%);
-  opacity: 0.6;
+  filter: none;
+  opacity: 0.85;
   transition: all 0.4s ease;
 }
 
 .brand-tile:hover img {
-  filter: grayscale(0%);
+  filter: none;
   opacity: 1;
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 .brand-tile-name {
