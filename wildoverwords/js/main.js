@@ -221,18 +221,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 
-  // --- Process horizontal scroll gallery ---
-  const processScroll = document.getElementById('process-scroll');
-  const processArrows = document.querySelectorAll('.process-arrow');
-  if (processScroll && processArrows.length) {
-    processArrows.forEach(arrow => {
-      arrow.addEventListener('click', () => {
-        const dir = parseInt(arrow.dataset.dir);
-        processScroll.scrollBy({ left: dir * 380, behavior: 'smooth' });
-      });
-    });
-  }
-
   // --- Hero parallax effect ---
   const heroImage = document.querySelector('.hero-image-container img');
   if (heroImage && !isMobileViewport) {
