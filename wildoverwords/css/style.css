@@ -353,7 +353,7 @@ p { margin-bottom: 1rem; font-weight: 300; }
 
 .hero-underline svg {
   position: absolute;
-  bottom: -8px;
+  bottom: -18px;
   left: 0;
   width: 100%;
   height: 16px;
@@ -457,6 +457,18 @@ p { margin-bottom: 1rem; font-weight: 300; }
   font-style: italic;
 }
 
+.hero-overlay-logo {
+  max-width: clamp(140px, 20vw, 260px);
+  height: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+  transition: opacity 0.4s ease;
+}
+
+.hero-image-container:hover .hero-overlay-logo {
+  opacity: 1;
+}
+
 @media (max-width: 600px) {
   .hero-image-container { height: 50vh; border-radius: var(--r-sm); }
   .hero-image-overlay { bottom: 24px; left: 24px; }
@@ -470,11 +482,11 @@ p { margin-bottom: 1rem; font-weight: 300; }
 }
 
 .whatido-strip {
-  padding: 32px 0;
+  padding: 44px 0;
   overflow: hidden;
-  border-top: 1px solid rgba(32, 42, 45, 0.06);
-  border-bottom: 1px solid rgba(32, 42, 45, 0.06);
-  background: var(--bg);
+  border-top: 1px solid rgba(32, 42, 45, 0.1);
+  border-bottom: 1px solid rgba(32, 42, 45, 0.1);
+  background: var(--text);
 }
 
 .whatido-track {
@@ -494,23 +506,24 @@ p { margin-bottom: 1rem; font-weight: 300; }
 
 .whatido-inner span {
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: 18px;
   font-weight: 400;
   font-style: italic;
   letter-spacing: 0.08em;
-  color: rgba(32, 42, 45, 0.4);
-  padding: 0 20px;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 0 24px;
   transition: color 0.3s;
 }
 
 .whatido-inner span:not(.whatido-dot):hover {
-  color: var(--text);
+  color: var(--white);
 }
 
 .whatido-dot {
-  font-size: 6px !important;
-  opacity: 0.25;
+  font-size: 8px !important;
+  opacity: 0.35;
   font-style: normal !important;
+  color: var(--accent);
 }
 
 /* --- Client Logos Marquee --- */
@@ -925,8 +938,8 @@ p { margin-bottom: 1rem; font-weight: 300; }
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  padding: 28px 18px 22px;
+  gap: 14px;
+  padding: 36px 22px 28px;
   border-radius: 20px;
   border: 1px solid rgba(32, 42, 45, 0.07);
   background: rgba(255, 255, 255, 0.6);
@@ -944,18 +957,31 @@ p { margin-bottom: 1rem; font-weight: 300; }
 
 .brand-tile img {
   max-width: 100%;
-  max-height: 40px;
+  max-height: 56px;
   width: auto;
   object-fit: contain;
-  filter: grayscale(100%);
-  opacity: 0.6;
+  filter: none;
+  opacity: 0.85;
   transition: all 0.4s ease;
 }
 
 .brand-tile:hover img {
-  filter: grayscale(0%);
   opacity: 1;
   transform: scale(1.05);
+}
+
+.brand-tile-text-logo {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--text);
+  opacity: 0.85;
+  letter-spacing: 0.02em;
+  transition: all 0.4s ease;
+}
+
+.brand-tile:hover .brand-tile-text-logo {
+  opacity: 1;
 }
 
 .brand-tile-name {
@@ -2521,9 +2547,9 @@ p { margin-bottom: 1rem; font-weight: 300; }
   }
 
   .whatido-inner span {
-    font-size: 11px;
+    font-size: 14px;
     letter-spacing: 0.05em;
-    padding: 0 14px;
+    padding: 0 16px;
   }
 
   .about-quote {
@@ -2689,7 +2715,7 @@ p { margin-bottom: 1rem; font-weight: 300; }
   }
 
   .whatido-inner span {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 
