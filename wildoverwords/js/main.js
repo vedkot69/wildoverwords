@@ -315,12 +315,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Form submission feedback ---
   const form = document.querySelector('#contact-form');
   if (form) {
+    const feedback = form.querySelector('.form-feedback');
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = form.querySelector('button[type="submit"]');
       const originalText = btn.textContent;
       btn.textContent = 'Sending...';
       btn.disabled = true;
+      if (feedback) { feedback.style.display = 'none'; feedback.className = 'form-feedback'; }
 
       try {
         const response = await fetch(form.action, {
@@ -331,15 +333,30 @@ document.addEventListener('DOMContentLoaded', () => {
         if (response.ok) {
           btn.textContent = 'Sent!';
           form.reset();
+          if (feedback) {
+            feedback.textContent = "Thank you! I'll get back to you within 36 hours.";
+            feedback.className = 'form-feedback success';
+            feedback.style.display = 'block';
+          }
           setTimeout(() => { btn.textContent = originalText; btn.disabled = false; }, 3000);
         } else {
           btn.textContent = 'Error — try again';
           btn.disabled = false;
+          if (feedback) {
+            feedback.textContent = 'Something went wrong. Please try emailing me directly at yuktiagarwal27@gmail.com';
+            feedback.className = 'form-feedback error';
+            feedback.style.display = 'block';
+          }
           setTimeout(() => { btn.textContent = originalText; }, 3000);
         }
       } catch {
         btn.textContent = 'Error — try again';
         btn.disabled = false;
+        if (feedback) {
+          feedback.textContent = 'Something went wrong. Please try emailing me directly at yuktiagarwal27@gmail.com';
+          feedback.className = 'form-feedback error';
+          feedback.style.display = 'block';
+        }
         setTimeout(() => { btn.textContent = originalText; }, 3000);
       }
     });

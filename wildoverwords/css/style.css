@@ -13,7 +13,7 @@
   --white: #fff;
   --font-heading: 'DM Serif Display', Georgia, serif;
   --font-body: 'Inter', system-ui, sans-serif;
-  --font-hand: 'Reenie Beanie', cursive;
+  /* --font-hand removed: consolidated to 2 fonts only */
   --nav-h: 80px;
   --container: 1200px;
   --gap: 160px;
@@ -87,9 +87,18 @@ p { margin-bottom: 1rem; font-weight: 300; }
 }
 
 .handwritten {
-  font-family: var(--font-hand);
+  font-family: var(--font-body);
   font-size: 48px;
   font-weight: 400;
+}
+
+.hero-scroll-label {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  text-transform: lowercase;
 }
 
 /* --- Buttons --- */
@@ -390,7 +399,8 @@ p { margin-bottom: 1rem; font-weight: 300; }
   color: rgba(32, 42, 45, 0.4);
 }
 
-.hero-annotation .handwritten {
+.hero-annotation .handwritten,
+.hero-annotation .hero-scroll-label {
   display: block;
   margin-bottom: 8px;
 }
@@ -830,10 +840,10 @@ p { margin-bottom: 1rem; font-weight: 300; }
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1.4fr;
   gap: 80px;
   align-items: center;
-  max-width: 720px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
@@ -1115,6 +1125,57 @@ p { margin-bottom: 1rem; font-weight: 300; }
 
 @media (max-width: 600px) {
   .services-grid { grid-template-columns: 1fr; }
+}
+
+/* Services Marquee Strip */
+.services-marquee {
+  overflow: hidden;
+  background: var(--accent);
+  border-radius: var(--r-pill);
+  margin: 24px 0;
+  padding: 14px 0;
+}
+
+.services-marquee-track {
+  display: flex;
+  gap: 0;
+  width: max-content;
+  animation: marquee-scroll 20s linear infinite;
+}
+
+.services-marquee-track span {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--text);
+  white-space: nowrap;
+  padding: 0 20px;
+  position: relative;
+}
+
+.services-marquee-track span::after {
+  content: '·';
+  position: absolute;
+  right: -4px;
+  opacity: 0.4;
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Case Study Blog Links */
+.cs-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.btn-sm {
+  padding: 10px 24px;
+  font-size: 9px;
 }
 
 /* --- Portfolio / Case Studies --- */
@@ -1822,6 +1883,27 @@ p { margin-bottom: 1rem; font-weight: 300; }
 
 .contact-form .btn { width: auto; min-width: 200px; }
 
+.form-feedback {
+  margin-top: 16px;
+  padding: 16px 20px;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.form-feedback.success {
+  background: rgba(203, 208, 181, 0.2);
+  border: 1px solid var(--accent);
+  color: var(--text);
+}
+
+.form-feedback.error {
+  background: rgba(200, 80, 80, 0.08);
+  border: 1px solid rgba(200, 80, 80, 0.3);
+  color: #7a3030;
+}
+
 @media (max-width: 600px) {
   .contact-form .btn { width: 100%; }
 }
@@ -2039,7 +2121,7 @@ p { margin-bottom: 1rem; font-weight: 300; }
 
 /* --- Blog Page --- */
 .page-header {
-  padding: 160px 0 80px;
+  padding: 160px 0 60px;
   text-align: center;
 }
 
@@ -2264,6 +2346,12 @@ p { margin-bottom: 1rem; font-weight: 300; }
 @media (hover: hover) and (min-width: 769px) {
   body { cursor: none; }
   a, button, [role="button"], input, textarea, select { cursor: none; }
+  /* Restore cursor on blog reading pages */
+  .article-content { cursor: auto; }
+  .article-content p, .article-content h2, .article-content h3, .article-content li { cursor: text; }
+  .article-content a { cursor: pointer; }
+  .page-header, .page-header * { cursor: auto; }
+  .back-link { cursor: pointer; }
 }
 
 .blog-listing {
@@ -2333,6 +2421,20 @@ p { margin-bottom: 1rem; font-weight: 300; }
 }
 
 .back-link:hover { opacity: 0.5; }
+
+.article-hero-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: var(--r-sm);
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.article-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 /* --- Global Alignment & Sizing Polish --- */
 .section-header {
@@ -2490,7 +2592,7 @@ p { margin-bottom: 1rem; font-weight: 300; }
   }
 
   .hero {
-    padding: 108px 0 44px;
+    padding: 136px 0 44px;
   }
 
   .hero h1 {
