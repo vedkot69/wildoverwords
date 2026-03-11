@@ -1126,15 +1126,6 @@ p { margin-bottom: 1rem; font-weight: 300; }
 @media (max-width: 600px) {
   .services-grid { grid-template-columns: 1fr; }
 }
-
-/* Services Divider Strip */
-.services-divider {
-  height: 3px;
-  background: var(--accent);
-  border-radius: var(--r-pill);
-  margin: 32px 0;
-}
-
 /* Case Study Blog Links */
 .cs-links {
   display: flex;
