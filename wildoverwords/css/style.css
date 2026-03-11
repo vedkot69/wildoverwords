@@ -406,6 +406,10 @@ p { margin-bottom: 1rem; font-weight: 300; }
 @media (max-width: 768px) {
   .hero { padding: 120px 0 60px; min-height: auto; }
   .hero h1 { font-size: clamp(2.5rem, 12vw, 4rem); }
+  .hero-underline svg {
+    bottom: -4px;
+    height: 12px;
+  }
 }
 
 /* --- Hero Image Block --- */
@@ -2807,6 +2811,11 @@ p { margin-bottom: 1rem; font-weight: 300; }
   .hero h1 {
     font-size: clamp(2.05rem, 11.2vw, 2.75rem);
     margin-bottom: 18px;
+  }
+
+  .hero-underline svg {
+    bottom: -6px;
+    height: 10px;
   }
 
   .hero-ctas {
