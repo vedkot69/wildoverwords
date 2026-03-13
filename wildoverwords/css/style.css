@@ -1082,6 +1082,7 @@ p { margin-bottom: 1rem; font-weight: 300; }
 .service-icon {
   width: 48px;
   height: 48px;
+  margin-top: 40px;
   margin-bottom: auto;
   font-size: 1.5rem;
   display: flex;
