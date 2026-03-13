@@ -1049,7 +1049,7 @@ p { margin-bottom: 1rem; font-weight: 300; }
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  min-height: 280px;
+  min-height: 360px;
 }
 
 .service-card::after {
@@ -1082,7 +1082,6 @@ p { margin-bottom: 1rem; font-weight: 300; }
 .service-icon {
   width: 48px;
   height: 48px;
-  margin-top: 40px;
   margin-bottom: auto;
   font-size: 1.5rem;
   display: flex;
