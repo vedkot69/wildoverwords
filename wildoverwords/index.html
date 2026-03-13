@@ -729,7 +729,10 @@
         <p>Whether you're a luxury label refining your social presence, a startup shaping its brand voice, or a founder building authority online, I'd love to hear about your vision.</p>
       </div>
       <div class="contact-grid">
-        <form id="contact-form" class="contact-form fade-up" action="send-mail.php" method="POST">
+        <form id="contact-form" class="contact-form fade-up" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+          <input type="hidden" name="from_name" value="Wild Over Words">
+          <input type="checkbox" name="botcheck" style="display:none">
           <div class="form-group">
             <label for="name">Your Name</label>
             <input type="text" id="name" name="name" required>
