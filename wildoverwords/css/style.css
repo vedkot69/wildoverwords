@@ -1039,6 +1039,10 @@ p { margin-bottom: 1rem; font-weight: 300; }
   align-items: stretch;
 }
 
+.services-grid + .services-grid {
+  margin-top: 24px;
+}
+
 .service-card {
   background: var(--accent);
   color: var(--text);
@@ -2869,7 +2873,7 @@ p { margin-bottom: 1rem; font-weight: 300; }
   }
 
   .hero {
-    padding: 96px 0 34px;
+    padding: 120px 0 34px;
   }
 
   .hero h1 {
