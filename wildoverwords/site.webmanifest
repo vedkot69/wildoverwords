@@ -1,0 +1,16 @@
+{
+  "name": "Wild Over Words",
+  "short_name": "WOW",
+  "description": "Strategy-led creative studio by Yukti Agarwal",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#F7F5EB",
+  "theme_color": "#CBD0B5",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
