@@ -1039,10 +1039,6 @@ p { margin-bottom: 1rem; font-weight: 300; }
   align-items: stretch;
 }
 
-.services-grid + .services-grid {
-  margin-top: 24px;
-}
-
 .service-card {
   background: var(--accent);
   color: var(--text);
