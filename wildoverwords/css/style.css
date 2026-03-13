@@ -1086,14 +1086,13 @@ p { margin-bottom: 1rem; font-weight: 300; }
 .service-icon {
   width: 48px;
   height: 48px;
-  margin-top: auto;
+  margin-bottom: auto;
   font-size: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0.6;
   transition: all 500ms ease;
-  order: 1;
 }
 
 .service-card:hover .service-icon {
@@ -1102,6 +1101,7 @@ p { margin-bottom: 1rem; font-weight: 300; }
 }
 
 .service-card h3 {
+  margin-top: auto;
   margin-bottom: 12px;
   font-style: italic;
   transition: color 500ms ease;
